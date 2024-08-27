@@ -66,4 +66,3 @@ st.plotly_chart(grafico_dolar, use_container_width=True)
 
 st.write(f"Euro (EUR/BRL): R${cotacao_euro:.2f}")
 st.plotly_chart(grafico_euro, use_container_width=True)
-
