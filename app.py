@@ -13,14 +13,7 @@ def gera_grafico_mensal(moeda, valor_atual):
     # Criando o gráfico de linha para evolução mensal com Plotly
     fig = go.Figure()
 
-    fig.add_trace(go.Scatter(
-        x=dias, 
-        y=valores, 
-        mode='lines+markers', 
-        name=moeda, 
-        line=dict(color='blue'),
-        hovertemplate='%{x|%d-%b-%Y}<br>Valor: R$%{y:.2f}<extra></extra>'  # Formato com duas casas decimais
-    ))
+    fig.add_trace(go.Scatter(x=dias, y=valores, mode='lines+markers', name=moeda, line=dict(color='blue')))
 
     # Adicionando o valor atual da moeda como texto no gráfico
     fig.add_annotation(
@@ -66,3 +59,5 @@ st.plotly_chart(grafico_dolar, use_container_width=True)
 
 st.write(f"Euro (EUR/BRL): R${cotacao_euro:.2f}")
 st.plotly_chart(grafico_euro, use_container_width=True)
+
+
